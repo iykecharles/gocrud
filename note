@@ -1,0 +1,7 @@
+closeErr := db.Close()
+	if closeErr != nil {
+		log.Printf("Erroe found while closing database")
+		os.Exit(100)
+
+	log.Printf("Database has been closed successfully")
+    
