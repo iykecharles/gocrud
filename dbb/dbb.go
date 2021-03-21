@@ -12,7 +12,7 @@ const (
 	port     = 5432
 	user     = "postgres"
 	password = "charles"
-	dbname   = "testdb"
+	dbname   = "goweb1"
 )
 
 // Connect would connect to the postgres database
@@ -28,9 +28,8 @@ func Connect() (*sql.DB, error) {
 	err = db.Ping()
 	if err != nil {
 		return nil, err
-		
+
 	}
 	fmt.Println("Connection to database was successful")
-		return db, err
-
+	return db, err
 }

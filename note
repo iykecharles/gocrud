@@ -1,7 +1,37 @@
-closeErr := db.Close()
-	if closeErr != nil {
-		log.Printf("Erroe found while closing database")
-		os.Exit(100)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+</head>
+<body>
+    <h1>Welcome to our HOME page of Software Engineer Charles Ezema.</h1>
+    <h3>
+    Age: {{.Age}}
+    <br>
+    Username: {{.Username}}</h3>
+    <p>Enjoy!</p>
+</body>
+</html>
 
-	log.Printf("Database has been closed successfully")
-    yes
+
+import (
+"fmt"
+"bufio"
+)
+
+func main() {
+    //reading an integer
+    var age int
+    fmt.Println("What is your age?")
+    _, err: fmt.Scan(&age)
+
+    //reading a string
+    reader := bufio.newReader(os.Stdin)
+    var name string
+    fmt.Println("What is your name?")
+    name, _ := reader.readString("\n")
+
+    fmt.Println("Your name is ", name, " and you are age ", age)
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <title>Contact Page</title>
+</head>
+<body>
+    <h1 class="text-center">Information about all persons</h1>
+    <hr>
+    <div class="mt-5 mb-5 ml-5 mr-5 text-capitalize">
+			{{range .}}
+				Id : {{.Id}}<br>
+				Firstname : {{.Firstname}}<br>
+				Lastname : {{.Lastname}}<br>
+				Email : {{.Email}}<br>
+				Gender : {{.Gender}}<br>    
+				Country : {{.Country}}<br>
+                <a class="btn btn-success" href="/update?id={{.Id}}">Edit</a>
+        <hr>
+
+			{{end}}
+    </div>
+    <hr>
+    
+</body>
+</html>
+

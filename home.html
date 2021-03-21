@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+</head>
+<body>
+    <h1>Welcome to our contact page, you are free to ask us any question.</h1>
+    <p>Be Free!</p>
+    <hr>
+
+    <h4>Give your information here</h4>
+    <form action="/insert/process" method="post">
+      <label for="firstnameid">firstname</label><br>
+      <input type="text" id="firstnameid" name="firstname" id=""><br>
+      <label for="lastnameid">lastname</label><br>
+      <input type="text" id="lastnameid" name="lastname" id=""><br>
+      <label for="emailid">email</label><br>
+      <input type="email" id="emailid" name="email" id=""><br>
+      <label for="genderid">gender</label><br>
+      <input type="text" id="genderid" name="gender" id=""><br>
+      <label for="countryid">country</label><br>
+      <input type="text" id="countryid" name="country" id=""><br>
+      <input type="submit" value="Insert Data">
+    </form>
+    <br>
+    {{if .}}
+      <h3>{{.}}</h3>
+    {{end}}
+
+</body>
+</html>
+
+
+
+    
+

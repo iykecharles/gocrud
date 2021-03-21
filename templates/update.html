@@ -6,7 +6,23 @@
     <title>Contact Page</title>
 </head>
 <body>
-    <h1>Welcome to our frequently asked question page, you are free to ask us any question.</h1>
-    <p>Be Free!</p>
+  <h1>Welcome to our frequently asked question page, you are free to ask us any question.</h1>
+  <p>Be Free!</p>
+
+  <div>
+    <form action="/updateprocess" method="post">
+      <label for="">firstname</label>
+      <input type="text" name="firstname" id="" value="{{.Firstname}}"><br>
+      <label for="">lastname</label>
+      <input type="text" name="lastname" id="" value="{{.Lastname}}"><br>
+      <label for="">email</label>
+      <input type="email" name="email" id="" value="{{.Email}}"><br>
+      <label for="">gender</label>
+      <input type="text" name="gender" id="" value="{{.Gender}}"><br>
+      <label for="">country</label>
+      <input type="text" name="country" id="" value="{{.Country}}"><br>
+      <input type="submit" value="Update Data">
+    </form>
+  </div>
 </body>
 </html>
