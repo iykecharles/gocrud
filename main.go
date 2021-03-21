@@ -30,7 +30,12 @@ var (
 
 func main() {
 
-	dbb.Connect()
+	var err error
+	db, err = dbb.Connect()
+
+	if err != nil {
+		panic(err)
+	}
 
 	r := mux.NewRouter()
 	r.HandleFunc("/", insertcreate)
@@ -74,6 +79,7 @@ func insertcreateProcess(w http.ResponseWriter, r *http.Request) {
 	insertstmt := `insert into person (firstname, lastname, email, gender, country) values ($1, $2, $3, $4, $5)`
 	_, err := db.Exec(insertstmt, p.firstname, p.lastname, p.email, p.gender, p.country)
 	if err != nil {
+		fmt.Println(err)
 		http.Error(w, http.StatusText(500), http.StatusInternalServerError)
 		return
 	}

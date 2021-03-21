@@ -4,4 +4,4 @@ closeErr := db.Close()
 		os.Exit(100)
 
 	log.Printf("Database has been closed successfully")
-    
+    yes
